@@ -1,0 +1,755 @@
+
+Eindopdracht.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000118  00800100  00000372  00000406  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000372  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000010e  00800218  00800218  0000051e  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000051e  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000550  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000080  00000000  00000000  0000058c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001152  00000000  00000000  0000060c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000958  00000000  00000000  0000175e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000bca  00000000  00000000  000020b6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000120  00000000  00000000  00002c80  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000119ca  00000000  00000000  00002da0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000009a2  00000000  00000000  0001476a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000a8  00000000  00000000  0001510c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_macro  00003cd0  00000000  00000000  000151b4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	12 e0       	ldi	r17, 0x02	; 2
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e2 e7       	ldi	r30, 0x72	; 114
+  a0:	f3 e0       	ldi	r31, 0x03	; 3
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a8 31       	cpi	r26, 0x18	; 24
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	23 e0       	ldi	r18, 0x03	; 3
+  b4:	a8 e1       	ldi	r26, 0x18	; 24
+  b6:	b2 e0       	ldi	r27, 0x02	; 2
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	a6 32       	cpi	r26, 0x26	; 38
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	a1 d0       	rcall	.+322    	; 0x206 <main>
+  c4:	54 c1       	rjmp	.+680    	; 0x36e <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <board_init>:
+#include <compiler.h>
+#include <conf_board.h>
+
+
+void board_init(void)
+{
+  c8:	08 95       	ret
+
+000000ca <clearRegisters>:
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+  ca:	e6 e2       	ldi	r30, 0x26	; 38
+  cc:	f3 e0       	ldi	r31, 0x03	; 3
+  ce:	88 e1       	ldi	r24, 0x18	; 24
+  d0:	92 e0       	ldi	r25, 0x02	; 2
+  d2:	12 92       	st	-Z, r1
+  d4:	e8 17       	cp	r30, r24
+  d6:	f9 07       	cpc	r31, r25
+  d8:	e1 f7       	brne	.-8      	; 0xd2 <clearRegisters+0x8>
+  da:	08 95       	ret
+
+000000dc <writeRegisters>:
+  dc:	e5 e6       	ldi	r30, 0x65	; 101
+  de:	f0 e0       	ldi	r31, 0x00	; 0
+  e0:	80 81       	ld	r24, Z
+  e2:	8e 7f       	andi	r24, 0xFE	; 254
+  e4:	80 83       	st	Z, r24
+  e6:	e8 e2       	ldi	r30, 0x28	; 40
+  e8:	f3 e0       	ldi	r31, 0x03	; 3
+  ea:	28 e1       	ldi	r18, 0x18	; 24
+  ec:	32 e0       	ldi	r19, 0x02	; 2
+  ee:	c1 98       	cbi	0x18, 1	; 24
+  f0:	82 91       	ld	r24, -Z
+  f2:	88 23       	and	r24, r24
+  f4:	11 f0       	breq	.+4      	; 0xfa <writeRegisters+0x1e>
+  f6:	c2 9a       	sbi	0x18, 2	; 24
+  f8:	01 c0       	rjmp	.+2      	; 0xfc <writeRegisters+0x20>
+  fa:	c2 98       	cbi	0x18, 2	; 24
+  fc:	c1 9a       	sbi	0x18, 1	; 24
+  fe:	e2 17       	cp	r30, r18
+ 100:	f3 07       	cpc	r31, r19
+ 102:	a9 f7       	brne	.-22     	; 0xee <writeRegisters+0x12>
+ 104:	e5 e6       	ldi	r30, 0x65	; 101
+ 106:	f0 e0       	ldi	r31, 0x00	; 0
+ 108:	80 81       	ld	r24, Z
+ 10a:	81 60       	ori	r24, 0x01	; 1
+ 10c:	80 83       	st	Z, r24
+ 10e:	08 95       	ret
+
+00000110 <setup>:
+ 110:	8f ef       	ldi	r24, 0xFF	; 255
+ 112:	87 bb       	out	0x17, r24	; 23
+ 114:	84 bb       	out	0x14, r24	; 20
+ 116:	80 93 64 00 	sts	0x0064, r24	; 0x800064 <__TEXT_REGION_LENGTH__+0x7e0064>
+ 11a:	a8 9a       	sbi	0x15, 0	; 21
+ 11c:	d6 df       	rcall	.-84     	; 0xca <clearRegisters>
+ 11e:	de cf       	rjmp	.-68     	; 0xdc <writeRegisters>
+ 120:	08 95       	ret
+
+00000122 <setRow>:
+/*	used to multiplex the rows on the board, 
+*	int row ranging from 0 to 6 because there are 6 rows on each block
+*/
+void setRow(int row)
+{
+	PORTC = 0x1F;
+ 122:	2f e1       	ldi	r18, 0x1F	; 31
+ 124:	25 bb       	out	0x15, r18	; 21
+
+	PORTC |= ((row & 1) << 5);
+ 126:	45 b3       	in	r20, 0x15	; 21
+ 128:	9c 01       	movw	r18, r24
+ 12a:	21 70       	andi	r18, 0x01	; 1
+ 12c:	33 27       	eor	r19, r19
+ 12e:	22 0f       	add	r18, r18
+ 130:	33 1f       	adc	r19, r19
+ 132:	22 95       	swap	r18
+ 134:	32 95       	swap	r19
+ 136:	30 7f       	andi	r19, 0xF0	; 240
+ 138:	32 27       	eor	r19, r18
+ 13a:	20 7f       	andi	r18, 0xF0	; 240
+ 13c:	32 27       	eor	r19, r18
+ 13e:	24 2b       	or	r18, r20
+ 140:	25 bb       	out	0x15, r18	; 21
+	PORTC |= ((row & 2) << 5);
+ 142:	45 b3       	in	r20, 0x15	; 21
+ 144:	9c 01       	movw	r18, r24
+ 146:	22 70       	andi	r18, 0x02	; 2
+ 148:	33 27       	eor	r19, r19
+ 14a:	22 0f       	add	r18, r18
+ 14c:	33 1f       	adc	r19, r19
+ 14e:	22 95       	swap	r18
+ 150:	32 95       	swap	r19
+ 152:	30 7f       	andi	r19, 0xF0	; 240
+ 154:	32 27       	eor	r19, r18
+ 156:	20 7f       	andi	r18, 0xF0	; 240
+ 158:	32 27       	eor	r19, r18
+ 15a:	24 2b       	or	r18, r20
+ 15c:	25 bb       	out	0x15, r18	; 21
+	PORTC |= ((row & 4) << 5);
+ 15e:	25 b3       	in	r18, 0x15	; 21
+ 160:	84 70       	andi	r24, 0x04	; 4
+ 162:	99 27       	eor	r25, r25
+ 164:	88 0f       	add	r24, r24
+ 166:	99 1f       	adc	r25, r25
+ 168:	82 95       	swap	r24
+ 16a:	92 95       	swap	r25
+ 16c:	90 7f       	andi	r25, 0xF0	; 240
+ 16e:	98 27       	eor	r25, r24
+ 170:	80 7f       	andi	r24, 0xF0	; 240
+ 172:	98 27       	eor	r25, r24
+ 174:	82 2b       	or	r24, r18
+ 176:	85 bb       	out	0x15, r24	; 21
+ 178:	08 95       	ret
+
+0000017a <setShiftingText>:
+*	int pos is the position you are writing the character on, ranging from 0-269
+*	int character is the column on the character you are writing ranging from 0-4 (each character is 5x7 LED's)
+*/
+void setShiftingText(int row, int pos, int character)
+{
+	setRegisterPin(pos%85,character_map[character][row]&1);
+ 17a:	9a 01       	movw	r18, r20
+ 17c:	22 0f       	add	r18, r18
+ 17e:	33 1f       	adc	r19, r19
+ 180:	22 0f       	add	r18, r18
+ 182:	33 1f       	adc	r19, r19
+ 184:	22 0f       	add	r18, r18
+ 186:	33 1f       	adc	r19, r19
+ 188:	24 1b       	sub	r18, r20
+ 18a:	35 0b       	sbc	r19, r21
+ 18c:	82 0f       	add	r24, r18
+ 18e:	93 1f       	adc	r25, r19
+ 190:	fc 01       	movw	r30, r24
+ 192:	e0 50       	subi	r30, 0x00	; 0
+ 194:	ff 4f       	sbci	r31, 0xFF	; 255
+ 196:	20 81       	ld	r18, Z
+ 198:	cb 01       	movw	r24, r22
+ 19a:	65 e5       	ldi	r22, 0x55	; 85
+ 19c:	70 e0       	ldi	r23, 0x00	; 0
+ 19e:	c0 d0       	rcall	.+384    	; 0x320 <__divmodhi4>
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 1a0:	fc 01       	movw	r30, r24
+ 1a2:	e8 5e       	subi	r30, 0xE8	; 232
+ 1a4:	fd 4f       	sbci	r31, 0xFD	; 253
+*	int pos is the position you are writing the character on, ranging from 0-269
+*	int character is the column on the character you are writing ranging from 0-4 (each character is 5x7 LED's)
+*/
+void setShiftingText(int row, int pos, int character)
+{
+	setRegisterPin(pos%85,character_map[character][row]&1);
+ 1a6:	82 2f       	mov	r24, r18
+ 1a8:	81 70       	andi	r24, 0x01	; 1
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 1aa:	80 83       	st	Z, r24
+*	int character is the column on the character you are writing ranging from 0-4 (each character is 5x7 LED's)
+*/
+void setShiftingText(int row, int pos, int character)
+{
+	setRegisterPin(pos%85,character_map[character][row]&1);
+	setRegisterPin(pos%85+1,character_map[character][row]&2);
+ 1ac:	82 2f       	mov	r24, r18
+ 1ae:	82 70       	andi	r24, 0x02	; 2
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 1b0:	81 83       	std	Z+1, r24	; 0x01
+*/
+void setShiftingText(int row, int pos, int character)
+{
+	setRegisterPin(pos%85,character_map[character][row]&1);
+	setRegisterPin(pos%85+1,character_map[character][row]&2);
+	setRegisterPin(pos%85+2,character_map[character][row]&4);
+ 1b2:	82 2f       	mov	r24, r18
+ 1b4:	84 70       	andi	r24, 0x04	; 4
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 1b6:	82 83       	std	Z+2, r24	; 0x02
+void setShiftingText(int row, int pos, int character)
+{
+	setRegisterPin(pos%85,character_map[character][row]&1);
+	setRegisterPin(pos%85+1,character_map[character][row]&2);
+	setRegisterPin(pos%85+2,character_map[character][row]&4);
+	setRegisterPin(pos%85+3,character_map[character][row]&8);
+ 1b8:	82 2f       	mov	r24, r18
+ 1ba:	88 70       	andi	r24, 0x08	; 8
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 1bc:	83 83       	std	Z+3, r24	; 0x03
+{
+	setRegisterPin(pos%85,character_map[character][row]&1);
+	setRegisterPin(pos%85+1,character_map[character][row]&2);
+	setRegisterPin(pos%85+2,character_map[character][row]&4);
+	setRegisterPin(pos%85+3,character_map[character][row]&8);
+	setRegisterPin(pos%85+4,character_map[character][row]&16);
+ 1be:	20 71       	andi	r18, 0x10	; 16
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 1c0:	24 83       	std	Z+4, r18	; 0x04
+ 1c2:	08 95       	ret
+
+000001c4 <setStaticText>:
+*	int pos is the position you are writing the character on, ranging from 0-269
+*	int character is the column on the character you are writing ranging from 0-4 (each character is 5x7 LED's)
+*/
+void setStaticText(int row, int pos, int character)
+{
+	setRegisterPin(pos,character_map[character][row]&1);
+ 1c4:	9a 01       	movw	r18, r20
+ 1c6:	22 0f       	add	r18, r18
+ 1c8:	33 1f       	adc	r19, r19
+ 1ca:	22 0f       	add	r18, r18
+ 1cc:	33 1f       	adc	r19, r19
+ 1ce:	22 0f       	add	r18, r18
+ 1d0:	33 1f       	adc	r19, r19
+ 1d2:	24 1b       	sub	r18, r20
+ 1d4:	35 0b       	sbc	r19, r21
+ 1d6:	82 0f       	add	r24, r18
+ 1d8:	93 1f       	adc	r25, r19
+ 1da:	fc 01       	movw	r30, r24
+ 1dc:	e0 50       	subi	r30, 0x00	; 0
+ 1de:	ff 4f       	sbci	r31, 0xFF	; 255
+ 1e0:	80 81       	ld	r24, Z
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 1e2:	fb 01       	movw	r30, r22
+ 1e4:	e8 5e       	subi	r30, 0xE8	; 232
+ 1e6:	fd 4f       	sbci	r31, 0xFD	; 253
+*	int pos is the position you are writing the character on, ranging from 0-269
+*	int character is the column on the character you are writing ranging from 0-4 (each character is 5x7 LED's)
+*/
+void setStaticText(int row, int pos, int character)
+{
+	setRegisterPin(pos,character_map[character][row]&1);
+ 1e8:	98 2f       	mov	r25, r24
+ 1ea:	91 70       	andi	r25, 0x01	; 1
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 1ec:	90 83       	st	Z, r25
+*	int character is the column on the character you are writing ranging from 0-4 (each character is 5x7 LED's)
+*/
+void setStaticText(int row, int pos, int character)
+{
+	setRegisterPin(pos,character_map[character][row]&1);
+	setRegisterPin(pos+1,character_map[character][row]&2);
+ 1ee:	98 2f       	mov	r25, r24
+ 1f0:	92 70       	andi	r25, 0x02	; 2
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 1f2:	91 83       	std	Z+1, r25	; 0x01
+*/
+void setStaticText(int row, int pos, int character)
+{
+	setRegisterPin(pos,character_map[character][row]&1);
+	setRegisterPin(pos+1,character_map[character][row]&2);
+	setRegisterPin(pos+2,character_map[character][row]&4);
+ 1f4:	98 2f       	mov	r25, r24
+ 1f6:	94 70       	andi	r25, 0x04	; 4
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 1f8:	92 83       	std	Z+2, r25	; 0x02
+void setStaticText(int row, int pos, int character)
+{
+	setRegisterPin(pos,character_map[character][row]&1);
+	setRegisterPin(pos+1,character_map[character][row]&2);
+	setRegisterPin(pos+2,character_map[character][row]&4);
+	setRegisterPin(pos+3,character_map[character][row]&8);
+ 1fa:	98 2f       	mov	r25, r24
+ 1fc:	98 70       	andi	r25, 0x08	; 8
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 1fe:	93 83       	std	Z+3, r25	; 0x03
+{
+	setRegisterPin(pos,character_map[character][row]&1);
+	setRegisterPin(pos+1,character_map[character][row]&2);
+	setRegisterPin(pos+2,character_map[character][row]&4);
+	setRegisterPin(pos+3,character_map[character][row]&8);
+	setRegisterPin(pos+4,character_map[character][row]&16);
+ 200:	80 71       	andi	r24, 0x10	; 16
+	int index is the LED you want to set, range from 0 to 269
+	char value is the value you want to set, either 1(LED on) or 0 (LED off)
+ */
+void setRegisterPin(int index, unsigned char value)
+{
+	registers[index] = value;
+ 202:	84 83       	std	Z+4, r24	; 0x04
+ 204:	08 95       	ret
+
+00000206 <main>:
+}
+
+/*	the main of the program, put call the code you want to run somewhere in here */
+int main (void)
+{
+	board_init();
+ 206:	60 df       	rcall	.-320    	; 0xc8 <board_init>
+	setup();
+ 208:	83 df       	rcall	.-250    	; 0x110 <setup>
+	PORTC |= ((row & 4) << 5);
+}
+
+/*	the main of the program, put call the code you want to run somewhere in here */
+int main (void)
+{
+ 20a:	68 94       	set
+ 20c:	22 24       	eor	r2, r2
+ 20e:	24 f8       	bld	r2, 4
+ 210:	0f 2e       	mov	r0, r31
+ 212:	f7 e2       	ldi	r31, 0x27	; 39
+ 214:	3f 2e       	mov	r3, r31
+ 216:	f0 2d       	mov	r31, r0
+ 218:	41 2c       	mov	r4, r1
+ 21a:	51 2c       	mov	r5, r1
+ 21c:	02 2d       	mov	r16, r2
+ 21e:	13 2d       	mov	r17, r3
+ 220:	6a c0       	rjmp	.+212    	; 0x2f6 <main+0xf0>
+	{
+		for(int shift = 10000; shift > 0; shift--)
+		{
+			for(int row = 0; row < 7; row++)
+			{
+				setRow(row);
+ 222:	ce 01       	movw	r24, r28
+ 224:	7e df       	rcall	.-260    	; 0x122 <setRow>
+
+				//ASSESMENT
+				setShiftingText(row, shift, 6);
+ 226:	46 e0       	ldi	r20, 0x06	; 6
+ 228:	50 e0       	ldi	r21, 0x00	; 0
+ 22a:	66 2d       	mov	r22, r6
+ 22c:	77 2d       	mov	r23, r7
+ 22e:	ce 01       	movw	r24, r28
+ 230:	a4 df       	rcall	.-184    	; 0x17a <setShiftingText>
+				setShiftingText(row, shift+6, 9);
+ 232:	49 e0       	ldi	r20, 0x09	; 9
+ 234:	50 e0       	ldi	r21, 0x00	; 0
+ 236:	b5 01       	movw	r22, r10
+ 238:	ce 01       	movw	r24, r28
+ 23a:	9f df       	rcall	.-194    	; 0x17a <setShiftingText>
+				setShiftingText(row, shift+12, 14);
+ 23c:	4e e0       	ldi	r20, 0x0E	; 14
+ 23e:	50 e0       	ldi	r21, 0x00	; 0
+ 240:	b6 01       	movw	r22, r12
+ 242:	ce 01       	movw	r24, r28
+ 244:	9a df       	rcall	.-204    	; 0x17a <setShiftingText>
+				setShiftingText(row, shift+18, 1);
+ 246:	41 e0       	ldi	r20, 0x01	; 1
+ 248:	50 e0       	ldi	r21, 0x00	; 0
+ 24a:	b7 01       	movw	r22, r14
+ 24c:	ce 01       	movw	r24, r28
+ 24e:	95 df       	rcall	.-214    	; 0x17a <setShiftingText>
+				setShiftingText(row, shift+24, 12);
+ 250:	4c e0       	ldi	r20, 0x0C	; 12
+ 252:	50 e0       	ldi	r21, 0x00	; 0
+ 254:	b4 01       	movw	r22, r8
+ 256:	ce 01       	movw	r24, r28
+ 258:	90 df       	rcall	.-224    	; 0x17a <setShiftingText>
+
+				//FINAL
+				setStaticText(row, 196, 1);
+ 25a:	41 e0       	ldi	r20, 0x01	; 1
+ 25c:	50 e0       	ldi	r21, 0x00	; 0
+ 25e:	64 ec       	ldi	r22, 0xC4	; 196
+ 260:	70 e0       	ldi	r23, 0x00	; 0
+ 262:	ce 01       	movw	r24, r28
+ 264:	af df       	rcall	.-162    	; 0x1c4 <setStaticText>
+				setStaticText(row, 202, 19);
+ 266:	43 e1       	ldi	r20, 0x13	; 19
+ 268:	50 e0       	ldi	r21, 0x00	; 0
+ 26a:	6a ec       	ldi	r22, 0xCA	; 202
+ 26c:	70 e0       	ldi	r23, 0x00	; 0
+ 26e:	ce 01       	movw	r24, r28
+ 270:	a9 df       	rcall	.-174    	; 0x1c4 <setStaticText>
+				setStaticText(row, 208, 19);
+ 272:	43 e1       	ldi	r20, 0x13	; 19
+ 274:	50 e0       	ldi	r21, 0x00	; 0
+ 276:	60 ed       	ldi	r22, 0xD0	; 208
+ 278:	70 e0       	ldi	r23, 0x00	; 0
+ 27a:	ce 01       	movw	r24, r28
+ 27c:	a3 df       	rcall	.-186    	; 0x1c4 <setStaticText>
+				setStaticText(row, 214, 5);
+ 27e:	45 e0       	ldi	r20, 0x05	; 5
+ 280:	50 e0       	ldi	r21, 0x00	; 0
+ 282:	66 ed       	ldi	r22, 0xD6	; 214
+ 284:	70 e0       	ldi	r23, 0x00	; 0
+ 286:	ce 01       	movw	r24, r28
+ 288:	9d df       	rcall	.-198    	; 0x1c4 <setStaticText>
+				setStaticText(row, 220, 19);
+ 28a:	43 e1       	ldi	r20, 0x13	; 19
+ 28c:	50 e0       	ldi	r21, 0x00	; 0
+ 28e:	6c ed       	ldi	r22, 0xDC	; 220
+ 290:	70 e0       	ldi	r23, 0x00	; 0
+ 292:	ce 01       	movw	r24, r28
+ 294:	97 df       	rcall	.-210    	; 0x1c4 <setStaticText>
+				setStaticText(row, 226, 19);
+ 296:	43 e1       	ldi	r20, 0x13	; 19
+ 298:	50 e0       	ldi	r21, 0x00	; 0
+ 29a:	62 ee       	ldi	r22, 0xE2	; 226
+ 29c:	70 e0       	ldi	r23, 0x00	; 0
+ 29e:	ce 01       	movw	r24, r28
+ 2a0:	91 df       	rcall	.-222    	; 0x1c4 <setStaticText>
+				setStaticText(row, 232, 13);
+ 2a2:	4d e0       	ldi	r20, 0x0D	; 13
+ 2a4:	50 e0       	ldi	r21, 0x00	; 0
+ 2a6:	68 ee       	ldi	r22, 0xE8	; 232
+ 2a8:	70 e0       	ldi	r23, 0x00	; 0
+ 2aa:	ce 01       	movw	r24, r28
+ 2ac:	8b df       	rcall	.-234    	; 0x1c4 <setStaticText>
+				setStaticText(row, 238, 5);
+ 2ae:	45 e0       	ldi	r20, 0x05	; 5
+ 2b0:	50 e0       	ldi	r21, 0x00	; 0
+ 2b2:	6e ee       	ldi	r22, 0xEE	; 238
+ 2b4:	70 e0       	ldi	r23, 0x00	; 0
+ 2b6:	ce 01       	movw	r24, r28
+ 2b8:	85 df       	rcall	.-246    	; 0x1c4 <setStaticText>
+				setStaticText(row, 244, 14);
+ 2ba:	4e e0       	ldi	r20, 0x0E	; 14
+ 2bc:	50 e0       	ldi	r21, 0x00	; 0
+ 2be:	64 ef       	ldi	r22, 0xF4	; 244
+ 2c0:	70 e0       	ldi	r23, 0x00	; 0
+ 2c2:	ce 01       	movw	r24, r28
+ 2c4:	7f df       	rcall	.-258    	; 0x1c4 <setStaticText>
+				setStaticText(row, 250, 20);
+ 2c6:	44 e1       	ldi	r20, 0x14	; 20
+ 2c8:	50 e0       	ldi	r21, 0x00	; 0
+ 2ca:	6a ef       	ldi	r22, 0xFA	; 250
+ 2cc:	70 e0       	ldi	r23, 0x00	; 0
+ 2ce:	ce 01       	movw	r24, r28
+ 2d0:	79 df       	rcall	.-270    	; 0x1c4 <setStaticText>
+
+				writeRegisters();
+ 2d2:	04 df       	rcall	.-504    	; 0xdc <writeRegisters>
+				clearRegisters();
+ 2d4:	fa de       	rcall	.-524    	; 0xca <clearRegisters>
+				writeRegisters();
+ 2d6:	02 df       	rcall	.-508    	; 0xdc <writeRegisters>
+
+	while(1) // this loop will shift the word 'final' on the top row and the word 'assessment' on the bottom row
+	{
+		for(int shift = 10000; shift > 0; shift--)
+		{
+			for(int row = 0; row < 7; row++)
+ 2d8:	21 96       	adiw	r28, 0x01	; 1
+ 2da:	c7 30       	cpi	r28, 0x07	; 7
+ 2dc:	d1 05       	cpc	r29, r1
+ 2de:	09 f0       	breq	.+2      	; 0x2e2 <main+0xdc>
+ 2e0:	a0 cf       	rjmp	.-192    	; 0x222 <main+0x1c>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 2e2:	8f e1       	ldi	r24, 0x1F	; 31
+ 2e4:	9e e4       	ldi	r25, 0x4E	; 78
+ 2e6:	01 97       	sbiw	r24, 0x01	; 1
+ 2e8:	f1 f7       	brne	.-4      	; 0x2e6 <main+0xe0>
+ 2ea:	00 c0       	rjmp	.+0      	; 0x2ec <main+0xe6>
+ 2ec:	00 00       	nop
+ 2ee:	01 50       	subi	r16, 0x01	; 1
+ 2f0:	11 09       	sbc	r17, r1
+	board_init();
+	setup();
+
+	while(1) // this loop will shift the word 'final' on the top row and the word 'assessment' on the bottom row
+	{
+		for(int shift = 10000; shift > 0; shift--)
+ 2f2:	09 f4       	brne	.+2      	; 0x2f6 <main+0xf0>
+ 2f4:	93 cf       	rjmp	.-218    	; 0x21c <main+0x16>
+ 2f6:	60 2e       	mov	r6, r16
+ 2f8:	71 2e       	mov	r7, r17
+	PORTC |= ((row & 4) << 5);
+}
+
+/*	the main of the program, put call the code you want to run somewhere in here */
+int main (void)
+{
+ 2fa:	c4 2d       	mov	r28, r4
+ 2fc:	d5 2d       	mov	r29, r5
+ 2fe:	58 01       	movw	r10, r16
+ 300:	96 e0       	ldi	r25, 0x06	; 6
+ 302:	a9 0e       	add	r10, r25
+ 304:	b1 1c       	adc	r11, r1
+ 306:	68 01       	movw	r12, r16
+ 308:	8c e0       	ldi	r24, 0x0C	; 12
+ 30a:	c8 0e       	add	r12, r24
+ 30c:	d1 1c       	adc	r13, r1
+ 30e:	78 01       	movw	r14, r16
+ 310:	92 e1       	ldi	r25, 0x12	; 18
+ 312:	e9 0e       	add	r14, r25
+ 314:	f1 1c       	adc	r15, r1
+ 316:	48 01       	movw	r8, r16
+ 318:	88 e1       	ldi	r24, 0x18	; 24
+ 31a:	88 0e       	add	r8, r24
+ 31c:	91 1c       	adc	r9, r1
+ 31e:	81 cf       	rjmp	.-254    	; 0x222 <main+0x1c>
+
+00000320 <__divmodhi4>:
+ 320:	97 fb       	bst	r25, 7
+ 322:	07 2e       	mov	r0, r23
+ 324:	16 f4       	brtc	.+4      	; 0x32a <__divmodhi4+0xa>
+ 326:	00 94       	com	r0
+ 328:	06 d0       	rcall	.+12     	; 0x336 <__divmodhi4_neg1>
+ 32a:	77 fd       	sbrc	r23, 7
+ 32c:	08 d0       	rcall	.+16     	; 0x33e <__divmodhi4_neg2>
+ 32e:	0b d0       	rcall	.+22     	; 0x346 <__udivmodhi4>
+ 330:	07 fc       	sbrc	r0, 7
+ 332:	05 d0       	rcall	.+10     	; 0x33e <__divmodhi4_neg2>
+ 334:	3e f4       	brtc	.+14     	; 0x344 <__divmodhi4_exit>
+
+00000336 <__divmodhi4_neg1>:
+ 336:	90 95       	com	r25
+ 338:	81 95       	neg	r24
+ 33a:	9f 4f       	sbci	r25, 0xFF	; 255
+ 33c:	08 95       	ret
+
+0000033e <__divmodhi4_neg2>:
+ 33e:	70 95       	com	r23
+ 340:	61 95       	neg	r22
+ 342:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00000344 <__divmodhi4_exit>:
+ 344:	08 95       	ret
+
+00000346 <__udivmodhi4>:
+ 346:	aa 1b       	sub	r26, r26
+ 348:	bb 1b       	sub	r27, r27
+ 34a:	51 e1       	ldi	r21, 0x11	; 17
+ 34c:	07 c0       	rjmp	.+14     	; 0x35c <__udivmodhi4_ep>
+
+0000034e <__udivmodhi4_loop>:
+ 34e:	aa 1f       	adc	r26, r26
+ 350:	bb 1f       	adc	r27, r27
+ 352:	a6 17       	cp	r26, r22
+ 354:	b7 07       	cpc	r27, r23
+ 356:	10 f0       	brcs	.+4      	; 0x35c <__udivmodhi4_ep>
+ 358:	a6 1b       	sub	r26, r22
+ 35a:	b7 0b       	sbc	r27, r23
+
+0000035c <__udivmodhi4_ep>:
+ 35c:	88 1f       	adc	r24, r24
+ 35e:	99 1f       	adc	r25, r25
+ 360:	5a 95       	dec	r21
+ 362:	a9 f7       	brne	.-22     	; 0x34e <__udivmodhi4_loop>
+ 364:	80 95       	com	r24
+ 366:	90 95       	com	r25
+ 368:	bc 01       	movw	r22, r24
+ 36a:	cd 01       	movw	r24, r26
+ 36c:	08 95       	ret
+
+0000036e <_exit>:
+ 36e:	f8 94       	cli
+
+00000370 <__stop_program>:
+ 370:	ff cf       	rjmp	.-2      	; 0x370 <__stop_program>
